@@ -198,28 +198,102 @@ aside p {
 }
 
 /*MENU------------------------*/
-#menu{
+#menu {
   background-image: url(../images/menu-bg.jpg);
   min-height: 100vh;
-
 }
-.menu-content{
-  max-width:560px;
-  margin-top:10%
+.menu-content {
+  max-width: 560px;
+  margin-top: 10%;
 }
-.menu-content .page-title{
-  text-align:center;
+.menu-content .page-title {
+  text-align: center;
 }
-.menu-content p{
-  font-size :1.125rem;
-  margin:  10px 0 0;
+.menu-content p {
+  font-size: 1.125rem;
+  margin: 10px 0 0;
 }
-.grid{
+.grid {
   display: grid;
-  gap:26px;
-  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   margin-top: 6%;
-  margin-bottom:50px;
+  margin-bottom: 50px;
+}
+
+/*CONTACT------------------------*/
+#contact {
+  background-image: url(../images/contact-bg.jpg);
+  min-height: 100vh;
+}
+
+/*フォーム*１ーーーーーーーーーーーーーーー*/
+from div {
+  margin-bottom: 14px;
+}
+label {
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px #fff solid;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  max-width: 240px;
+}
+textarea {
+  width: 100%;
+  max-width: 480px;
+  height: 6rem;
+}
+input[type="sumbit"] {
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+}
+/*店舗情報、地図*/
+#location {
+  padding: 4% 0;
+}
+#location .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.location-info {
+  width: 22%;
+}
+.location-info p {
+  padding: 12px 10px;
+}
+.location-map {
+  width: 74%;
+}
+
+/*SNS*/
+#sns{
+  background: :FAF7F0;
+  padding:4% 0;
+}
+#sns .wrapper{
+  display:flex;
+  justify-content: space-between;
+}
+#sns .sub-title{
+  margin-bottom: 30px;
+}
+.sns-box{
+  width:30%;
 }
 
 /*モバイル版ーーーーーーーーーーーーー*/
@@ -279,9 +353,31 @@ aside p {
   }
 
   /*MENU*/
-  .menu-content{
-    margin-top 20%;
+  .menu-content {
+    margin-top: 20%;
+  }
+  /*CONTACT*/
+  #contact .page-title {
+    margin-top: 40px;
+  }
+
+  /*フォーム*/
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    max-width: 100%;
+  }
+  /*店舗情報、地図/SNS*/
+  #location .wrapper,
+  #sns .wrapper{
+    flex-direction: column;
+  }
+  .location-info,
+  .location-map,
+  .sns-box{
+    width: 100%;
+  }
+  .sns-box{
+    margin-bottom: 30px;
   }
 }
-
-
